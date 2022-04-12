@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "resourceTypes": ["image"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 2,
+    "action": {
+        "type": "modifyHeaders",
+        "requestHeaders": [
+            {
+                "header": "origin",
+                "operation": "remove"
+            }
+        ]
+    },
+    "condition" : {
+        "resourceTypes" : ["main_frame", "sub_frame"]
+      }
+  }
+]
